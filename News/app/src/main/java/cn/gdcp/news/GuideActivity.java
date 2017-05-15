@@ -1,9 +1,12 @@
 package cn.gdcp.news;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.ViewFlipper;
 
 /**
@@ -14,6 +17,7 @@ public class GuideActivity extends Activity {
     private ViewFlipper guide_flipper;
     private CustomGestureDetectorListener mDetectorListener;
     private GestureDetector mGestureDetector;
+    private TextView txtStart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +28,15 @@ public class GuideActivity extends Activity {
         guide_flipper = (ViewFlipper) findViewById(R.id.guide_flipper);
         mDetectorListener = new CustomGestureDetectorListener();
         mGestureDetector = new GestureDetector(GuideActivity.this, mDetectorListener);
+
+        txtStart = (TextView) findViewById(R.id.txt_start);
+        txtStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(GuideActivity.this, MainActivity.class));
+                finish();
+            }
+        });
     }
 
     @Override

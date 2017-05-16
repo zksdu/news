@@ -35,9 +35,9 @@ public class MainActivity extends FragmentActivity {
     private void initTitleList() {
 
         mTitleList.add("头条");
-//        mTitleList.add("娱乐");
-//        mTitleList.add("体育");
-//        mTitleList.add("科技");
+        mTitleList.add("娱乐");
+        mTitleList.add("体育");
+        mTitleList.add("科技");
     }
 
     private void initFragmentArrayList() {
@@ -53,8 +53,8 @@ public class MainActivity extends FragmentActivity {
         NewsFragment fd = new NewsFragment();
         fd.setTxtContent("科技页面");
         mFragmentArrayList.add(fa);
-//        mFragmentArrayList.add(fb);
-//        mFragmentArrayList.add(fc);
-//        mFragmentArrayList.add(fd);
+        mFragmentArrayList.add(fb);
+        mFragmentArrayList.add(fc);
+        mFragmentArrayList.add(fd);
     }
 }

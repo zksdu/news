@@ -5,15 +5,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
 /**
  * Created by yls on 2017/5/18.
  */
 public class NewsAdapter extends RecyclerView.Adapter<NewsViewHolder> {
-    private List<News> mNewsList;
+    private List<NewsData.ResultBean.NewsBean> mNewsList;
 
-    public  NewsAdapter(List<News> newsList){
+    public  NewsAdapter(List<NewsData.ResultBean.NewsBean> newsList){
         this.mNewsList = newsList;
     }
 
@@ -26,14 +28,23 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsViewHolder> {
 
     @Override
     public void onBindViewHolder(NewsViewHolder holder, int position) {
-        News news = mNewsList.get(position);
+        NewsData.ResultBean.NewsBean news = mNewsList.get(position);
 //        news.getImgurl()
 //        holder.imgView
         holder.titleView.setText(news.getTitle());
+        Glide.with(holder.imgView.getContext())
+                .load(news.getThumbnail_pic_s())
+                .into(holder.imgView);
     }
 
     @Override
     public int getItemCount() {
         return mNewsList.size();
+    }
+
+
+    public void changData(List<NewsData.ResultBean.NewsBean> newsList) {
+        this.mNewsList = newsList;
+        notifyDataSetChanged();
     }
 }

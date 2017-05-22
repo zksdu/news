@@ -1,4 +1,4 @@
-package cn.gdcp.news;
+package cn.gdcp.news.fragment;
 
 
 import android.os.Bundle;
@@ -19,6 +19,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.gdcp.news.data.NewsData;
+import cn.gdcp.news.R;
+import cn.gdcp.news.adapter.NewsAdapter;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.OkHttpClient;
@@ -125,6 +128,7 @@ public class NewsFragment extends Fragment {
         mRecyclerView.setAdapter(mNewsAdapter);
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
         return view;
     }
 

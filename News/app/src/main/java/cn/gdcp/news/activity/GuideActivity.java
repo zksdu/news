@@ -1,4 +1,4 @@
-package cn.gdcp.news;
+package cn.gdcp.news.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,6 +8,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
+
+import cn.gdcp.news.R;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.

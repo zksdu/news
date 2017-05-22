@@ -1,4 +1,4 @@
-package cn.gdcp.news;
+package cn.gdcp.news.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -6,6 +6,10 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 
 import java.util.ArrayList;
+
+import cn.gdcp.news.adapter.MyPageAdapter;
+import cn.gdcp.news.fragment.NewsFragment;
+import cn.gdcp.news.R;
 
 public class MainActivity extends FragmentActivity {
     private TabLayout mTabLayout;
@@ -28,6 +32,8 @@ public class MainActivity extends FragmentActivity {
 
         mPageAdapter = new MyPageAdapter(getSupportFragmentManager(), mFragmentArrayList, mTitleList);
         mViewPager.setAdapter(mPageAdapter);
+        mViewPager.setOffscreenPageLimit(4); // 3天
+
 //
         mTabLayout.setupWithViewPager(mViewPager);
     }

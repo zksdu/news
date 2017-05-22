@@ -1,4 +1,4 @@
-package cn.gdcp.news;
+package cn.gdcp.news.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;

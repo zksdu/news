@@ -1,4 +1,4 @@
-package cn.gdcp.news;
+package cn.gdcp.news.data;
 
 import java.util.List;
 

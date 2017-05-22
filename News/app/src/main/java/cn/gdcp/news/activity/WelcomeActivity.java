@@ -1,4 +1,4 @@
-package cn.gdcp.news;
+package cn.gdcp.news.activity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+
+import cn.gdcp.news.R;
+import cn.gdcp.news.util.SPUtil;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.gdcp.news.activity.TopActivity">
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/holo_blue_light"
+        android:id="@+id/top_pager">
+
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@android:color/white">
+
+        <TextView
+            android:background="@android:color/holo_red_dark"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:text="新闻"
+            android:id="@+id/news_tab"/>
+
+        <TextView
+
+            android:background="@android:color/holo_blue_dark"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:text="笑话"
+            android:id="@+id/joke_tab"/>
+
+        <TextView
+
+            android:background="@android:color/holo_green_dark"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:text="天气"
+            android:id="@+id/weather_tab"/>
+
+        <TextView
+            android:background="@android:color/holo_orange_dark"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:text="我的"
+            android:id="@+id/my_tab"/>
+    </LinearLayout>
+</LinearLayout>

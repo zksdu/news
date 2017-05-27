@@ -35,7 +35,7 @@ public class GuideActivity extends Activity {
         txtStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(GuideActivity.this, MainActivity.class));
+                startActivity(new Intent(GuideActivity.this, TopActivity.class));
                 finish();
             }
         });

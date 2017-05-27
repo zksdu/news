@@ -22,8 +22,8 @@ public class MainFragment extends Fragment {
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
     private MyPageAdapter mPageAdapter;
-    private ArrayList<NewsFragment> mFragmentArrayList = new ArrayList<NewsFragment>();
-    private ArrayList<String> mTitleList = new ArrayList<String>();;
+    private ArrayList<NewsFragment> mFragmentArrayList;
+    private ArrayList<String> mTitleList;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -40,7 +40,9 @@ public class MainFragment extends Fragment {
         mTabLayout = (TabLayout) view.findViewById(R.id.sliding_tabs);
         mViewPager = (ViewPager) view.findViewById(R.id.viewpager);
 
-        mPageAdapter = new MyPageAdapter(getFragmentManager(), mFragmentArrayList, mTitleList);
+        if(mPageAdapter == null) {
+            mPageAdapter = new MyPageAdapter(getFragmentManager(), mFragmentArrayList, mTitleList);
+        }
         mViewPager.setAdapter(mPageAdapter);
         mViewPager.setOffscreenPageLimit(4);
         mTabLayout.setupWithViewPager(mViewPager);
@@ -51,6 +53,9 @@ public class MainFragment extends Fragment {
 
     private void initTitleList() {
 
+        if(mTitleList == null){
+            mTitleList = new ArrayList<>();
+        }
         mTitleList.add("头条");
         mTitleList.add("娱乐");
         mTitleList.add("体育");
@@ -79,6 +84,9 @@ public class MainFragment extends Fragment {
         bundle4.putInt("NEWSTYPE", 4);
         fd.setArguments(bundle4);
 
+        if(mFragmentArrayList == null){
+            mFragmentArrayList = new ArrayList<>();
+        }
 
         mFragmentArrayList.add(fa);
         mFragmentArrayList.add(fb);

@@ -13,9 +13,16 @@
         android:layout_height="wrap_content"
         android:text="天气的Fragmet"/>
 
-
+<HorizontalScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="1000dp"
+        android:layout_height="300dp">
     <cn.gdcp.news.view.TemView
         android:layout_width="1000dp"
         android:layout_height="300dp"
         />
+    </LinearLayout>
+</HorizontalScrollView>
 </LinearLayout>
